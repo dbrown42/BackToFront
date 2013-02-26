@@ -8,25 +8,31 @@ package backtofront;
  *
  * @author dbrown69
  */
-public class LineItem {
-    private String prodId;
+public class LineItem{
     private double qty;
     private Product product;
     
-    
-    public LineItem(String prodId, double qty, Product product){
-        this.prodId = prodId;
+    public LineItem(String prodId, int qty){
+        FakeDatabase db = new FakeDatabase();
         this.qty = qty;
-        this.product = product;
+        product = db.findProduct(prodId);
     }
-    
-    public String getProdName(){
-        
-        return this.product.getProdName();
-    }
-    
-    
     
     public static void main(String[] args){
+        
+    }
+
+    /**
+     * @return the qty
+     */
+    public double getQty() {
+        return qty;
+    }
+
+    /**
+     * @param qty the qty to set
+     */
+    public void setQty(double qty) {
+        this.qty = qty;
     }
 }
