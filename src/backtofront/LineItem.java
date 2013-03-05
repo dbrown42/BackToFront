@@ -17,10 +17,6 @@ public class LineItem{
         this.qty = qty;
         product = db.findProduct(prodId);
     }
-    
-    public static void main(String[] args){
-        
-    }
 
     /**
      * @return the qty
@@ -34,5 +30,13 @@ public class LineItem{
      */
     public void setQty(double qty) {
         this.qty = qty;
+    }
+    
+    public Product getProduct(){
+        return this.product;
+    }
+    
+    public static void main(String[] args){
+        
     }
 }
