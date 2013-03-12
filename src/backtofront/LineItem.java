@@ -9,7 +9,7 @@ package backtofront;
  * @author dbrown69
  */
 public class LineItem{
-    private double qty;
+    private int qty;
     private Product product;
     
     public LineItem(String prodId, int qty){
@@ -21,14 +21,14 @@ public class LineItem{
     /**
      * @return the qty
      */
-    public double getQty() {
+    public int getQty() {
         return qty;
     }
 
     /**
      * @param qty the qty to set
      */
-    public void setQty(double qty) {
+    public void setQty(int qty) {
         this.qty = qty;
     }
     

@@ -48,6 +48,10 @@ public class Product {
         this.discount = discount;
     }
     
+    public double getDiscountRate(){
+       return discount.getDiscountRate(); 
+    }
+    
     public static void main(String[] args){
         Product product = new Product("101", "Hat", 20.00, new QuantityVariableRateDiscount(.2, 5));
         double discount = product.getDiscountAmt(8);
